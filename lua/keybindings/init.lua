@@ -15,3 +15,4 @@ map('n', '<C-j>', '<C-w>j', {noremap = true, silent = false})
 map('n', '<C-k>', '<C-w>k', {noremap = true, silent = false})
 
 map('n', '<leader>ft', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+map('n', '<leader><TAB>', ':bprevious<CR>', {noremap = true, silent = true})

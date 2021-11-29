@@ -35,5 +35,5 @@ return require('packer').startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "terrortylor/nvim-comment"
 
-  use "nvim-lua/plenary.nvim"
+  use "nvim-telescope/telescope-project.nvim"
 end)
