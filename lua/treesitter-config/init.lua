@@ -1,5 +1,17 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"html", "javascript", "lua"},
+  ensure_installed = {
+    "html",
+    "javascript",
+    "lua",
+    "go",
+    "cpp",
+    "python",
+    "java",
+    "scala",
+    "json",
+    "vim",
+    "yaml",
+  },
   highlight = {
     enable = true,              -- false will disable the whole extension
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

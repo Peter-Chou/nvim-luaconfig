@@ -21,8 +21,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/vim-vsnip'
   use 'onsails/lspkind-nvim'
 
-  use 'folke/lsp-colors.nvim'
-
   use 'norcalli/nvim-colorizer.lua'
   use {
     'lewis6991/gitsigns.nvim',
