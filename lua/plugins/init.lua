@@ -22,13 +22,6 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'
 
   use 'norcalli/nvim-colorizer.lua'
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {'nvim-lua/plenary.nvim'},
-    config = function()
-      require('gitsigns').setup {current_line_blame = true}
-    end
-  }
   use 'glepnir/dashboard-nvim'
   use "lukas-reineke/indent-blankline.nvim"
   use 'lukas-reineke/format.nvim'
@@ -36,4 +29,11 @@ return require('packer').startup(function(use)
   use "terrortylor/nvim-comment"
 
   use "nvim-telescope/telescope-project.nvim"
+
+  use {
+    "blackCauldron7/surround.nvim",
+    config = function()
+      require"surround".setup {mappings_style = "sandwich"}
+    end
+  }
 end)

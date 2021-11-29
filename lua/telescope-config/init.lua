@@ -2,13 +2,14 @@ local actions = require('telescope.actions')
 local telescope = require('telescope')
 
 telescope.setup {
+  extensions = {project = {display_type = "full"}},
   defaults = {
     layout_config = {width = 0.75, prompt_position = "top", preview_cutoff = 120, horizontal = {mirror = false}, vertical = {mirror = false}},
     find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
     prompt_prefix = " ",
     selection_caret = " ",
     entry_prefix = "  ",
-    initial_mode = "insert",
+    -- initial_mode = "insert",
     selection_strategy = "reset",
     sorting_strategy = "descending",
     layout_strategy = "horizontal",

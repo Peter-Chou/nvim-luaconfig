@@ -25,8 +25,8 @@ local mappings = {
 
   p = {
     name = "+project",
-    p = {":Telescope projects<cr>", "switch projects"},
-    ["."] = {":lua require'telescope'.extensions.project.project{}<CR>", "project transient"}
+    ["."] = {":Telescope project display_type=full<CR>", "project transient"}
+    -- f = {":lua require'telescope'.extensions.project.project{}.current()<cr>", "search files in project"}
   },
 
   t = {name = "+toggle", t = {name = "terminal", t = {":ToggleTerm<cr>", "toggle terminal"}, f = {toggle_float, "toggle Floating Terminal"}}}
