@@ -34,4 +34,6 @@ return require('packer').startup(function(use)
   use 'lukas-reineke/format.nvim'
   use "akinsho/toggleterm.nvim"
   use "terrortylor/nvim-comment"
+
+  use "nvim-lua/plenary.nvim"
 end)

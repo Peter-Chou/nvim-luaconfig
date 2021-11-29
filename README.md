@@ -6,6 +6,17 @@
 
 ripgrep
 
+npm -i -g prettier
+
+lua formatter
+
+``` bash
+git clone --recurse-submodules https://github.com/Koihik/LuaFormatter.git
+cd LuaFormatter 
+mkdir build && cd build
+cmake ..
+make -j $(nproc) && make install
+```
 
 lua ls
 
