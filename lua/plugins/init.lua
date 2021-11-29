@@ -1,7 +1,8 @@
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'arcticicestudio/nord-vim'
+  -- use 'arcticicestudio/nord-vim'
+  use 'Mofiqul/dracula.nvim'
   use 'rose-pine/neovim'
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
   use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
@@ -19,6 +20,9 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
   use 'onsails/lspkind-nvim'
+
+  use 'folke/lsp-colors.nvim'
+
   use 'norcalli/nvim-colorizer.lua'
   use {
     'lewis6991/gitsigns.nvim',
