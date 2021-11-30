@@ -31,4 +31,8 @@ return require('packer').startup(function(use)
   use "nvim-telescope/telescope-project.nvim"
 
   use "blackCauldron7/surround.nvim"
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1.2', -- optional but strongly recommended
+  }
 end)
