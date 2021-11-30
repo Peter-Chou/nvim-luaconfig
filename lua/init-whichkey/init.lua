@@ -22,6 +22,7 @@ local mappings = {
   },
 
   b = {name = "+buffer", d = {":bdelete<CR>", "Close buffer"}, b = {":Telescope buffers<cr>", "list buffers"}},
+  j = {name = "+jump", j = {"::HopChar2<CR>", "jump char2"}, },
 
   p = {
     name = "+project",
