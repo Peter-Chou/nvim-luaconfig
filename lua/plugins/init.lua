@@ -30,10 +30,5 @@ return require('packer').startup(function(use)
 
   use "nvim-telescope/telescope-project.nvim"
 
-  use {
-    "blackCauldron7/surround.nvim",
-    config = function()
-      require"surround".setup {mappings_style = "sandwich"}
-    end
-  }
+  use "blackCauldron7/surround.nvim"
 end)
