@@ -1,4 +1,7 @@
 require'format'.setup {
+  ["*"] = {
+    {cmd = {"sed -i 's/[ \t]*$//'"}} -- remove trailing whitespace
+  },
   html = {{cmd = {"prettier -w"}}},
   css = {{cmd = {"prettier -w"}}},
   json = {{cmd = {"prettier -w"}}},
@@ -28,13 +31,15 @@ require'format'.setup {
     }
   },
   python = {
-    {
-      cmd = {
-        function(file)
-          return string.format('yapf --quiet %s', file)
-        end
-      }
-    }
+
+    {cmd = {"yapf -i", "isort"}}
+    -- {
+    --   cmd = {
+    --     function(file)
+    --       return string.format('yapf --quiet %s', file)
+    --     end
+    --   }
+    -- }
   },
   go = {
     {
@@ -45,8 +50,7 @@ require'format'.setup {
       },
       tempfile_postfix = ".tmp"
     }
-  },
+  }
 }
-
 
 vim.cmd('autocmd BufWritePost * FormatWrite')
