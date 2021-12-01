@@ -33,6 +33,8 @@ return require('packer').startup(function(use)
   use "blackCauldron7/surround.nvim"
   use {
     'phaazon/hop.nvim',
-    branch = 'v1.2', -- optional but strongly recommended
+    branch = 'v1.2' -- optional but strongly recommended
   }
+
+  use "editorconfig/editorconfig-vim"
 end)
