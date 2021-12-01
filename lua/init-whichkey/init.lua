@@ -10,27 +10,31 @@ local toggle_lazygit = function()
 end
 
 local mappings = {
-  q = {name = "quit", q = {":q<CR>", "Quit"}},
+  q = {name = "quit", q = {":q<cr>", "Quit"}},
 
   ["'"] = {":ToggleTerm<cr>", "toggle terminal"},
   f = {
     name = "+file",
 
-    e = {name = "editor", d = {":e ~/.config/nvim/init.lua<CR>", "edit config"}},
-    s = {":w<CR>", "Save file"},
+    e = {name = "editor", d = {":e ~/.config/nvim/init.lua<cr>", "edit config"}},
+    s = {":w<cr>", "Save file"},
     r = {":Telescope oldfiles<cr>", "recent files"}
   },
 
-  b = {name = "+buffer", d = {":bdelete<CR>", "Close buffer"}, b = {":Telescope buffers<cr>", "list buffers"}},
-  j = {name = "+jump", j = {"::HopChar2<CR>", "jump char2"}, },
+  b = {name = "+buffer", d = {":bdelete<cr>", "Close buffer"}, b = {":Telescope buffers<cr>", "list buffers"}},
+  j = {name = "+jump", j = {"::HopChar2<cr>", "jump char2"}},
 
   p = {
     name = "+project",
-    ["."] = {":Telescope project display_type=full<CR>", "project transient"}
+    ["."] = {":Telescope project display_type=full<cr>", "project transient"}
     -- f = {":lua require'telescope'.extensions.project.project{}.current()<cr>", "search files in project"}
   },
 
-  t = {name = "+toggle", t = {name = "terminal", t = {":ToggleTerm<cr>", "toggle terminal"}, f = {toggle_float, "toggle Floating Terminal"}}}
+  t = {
+    name = "+toggle",
+    v = {":set wrap!<cr>", "toggle vitual line"},
+    t = {name = "terminal", t = {":ToggleTerm<cr>", "toggle terminal"}, f = {toggle_float, "toggle Floating Terminal"}}
+  }
 }
 local opts = {prefix = '<leader>'}
 wk.register(mappings, opts)
