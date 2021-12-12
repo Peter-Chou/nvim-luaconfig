@@ -42,4 +42,5 @@ return require('packer').startup(function(use)
   use "editorconfig/editorconfig-vim"
 
   use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use "airblade/vim-rooter"
 end)
