@@ -21,6 +21,24 @@ local mappings = {
     r = {":Telescope oldfiles<cr>", "recent files"}
   },
 
+  l = {
+    name = "lsp",
+    g = {
+      name = "goto",
+      d = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
+      D = {"<Cmd>lua vim.lsp.buf.declaration()<CR>", "go to declaration"},
+      i = {"<cmd>lua vim.lsp.buf.implementation()<CR>", "go to implementation"},
+      r = {"<cmd>lua vim.lsp.buf.references()<CR>", "go to reference"}
+    },
+    t = {"<cmd>lua vim.lsp.buf.type_definition()<CR>", "type definition"},
+    w = {
+      name = "workspace",
+      a = {"<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", "add workspace"},
+      r = {"<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", "remove workspace"},
+      l = {"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", "list workspaces"}
+    }
+  },
+
   b = {name = "+buffer", d = {":bdelete<cr>", "Close buffer"}, b = {":Telescope buffers<cr>", "list buffers"}},
   j = {name = "+jump", j = {"::HopChar2<cr>", "jump char2"}},
 

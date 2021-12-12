@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
   use 'Mofiqul/dracula.nvim'
   use 'rose-pine/neovim'
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+
   use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
@@ -13,7 +14,7 @@ return require('packer').startup(function(use)
   use {'windwp/nvim-autopairs'}
   use {'folke/which-key.nvim'}
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}}
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -36,6 +37,7 @@ return require('packer').startup(function(use)
     'phaazon/hop.nvim',
     branch = 'v1.2' -- optional but strongly recommended
   }
+  use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
 
   use "editorconfig/editorconfig-vim"
 
